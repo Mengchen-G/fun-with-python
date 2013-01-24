@@ -92,7 +92,7 @@ def print_final_stats(total, score, problem_states):
     print 'Total States:', total_states
     print 'Total Answered:', total
     print 'Total Correct:', score
-    print 'Percent Correct: {percent}%'.format(percent = str(score_percent))
+    print '%1.2f%% Correct' % score_percent 
     print 'Problem States:'
     for key, value in sorted(problem_states.iteritems(), key=lambda (k,v): (v, k), reverse=True):
         print "\tState: {state}, Count: {num_wrong}".format(state = key, num_wrong = problem_states[key])
